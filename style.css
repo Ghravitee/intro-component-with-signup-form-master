@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --Red: hsl(0, 100%, 74%);
+  --Green: hsl(154, 59%, 51%);
+  --Blue: hsl(248, 32%, 49%);
+  --Dark-Blue: hsl(249, 10%, 26%);
+  --Grayish-Blue: hsl(246, 25%, 77%);
+
+  --ff-primary: "Poppins", sans-serif;
+
+  --br: 0.5rem;
+}
+
+/* For box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Removes default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* List elements */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/*  root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.2;
+}
+
+/* Default styles for elements that do not have a class*/
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Global styling for images*/
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+ul {
+  padding-left: 0;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--ff-primary);
+  padding: 3rem 1.5rem;
+  background-color: var(--Red);
+  background-image: url(images/bg-intro-mobile.png);
+  background-repeat: no-repeat;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.9rem;
+}
+
+.title {
+  color: white;
+  font-weight: 700;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.paragraph-1 {
+  color: white;
+  opacity: 0.6;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  line-height: 1.5;
+}
+
+button span {
+  font-weight: 700;
+}
+
+.btn {
+  background-color: var(--Blue);
+  color: white;
+  padding: 1rem 4rem;
+  border-radius: var(--br);
+  border: none;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 400;
+  font-size: 1rem;
+  box-shadow: 0px 7px rgba(0, 0, 0, 0.2);
+  line-height: 1.5;
+}
+
+.container-2 {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: var(--br);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  box-shadow: 0px 7px rgba(0, 0, 0, 0.2);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form input {
+  border-radius: var(--br);
+  padding: 1rem;
+  border: 1px solid var(--Grayish-Blue);
+  width: 100%;
+}
+
+
+::placeholder {
+  color: var(--Dark-Blue);
+  font-weight: 500;
+}
+
+
+.btn-2 {
+  background-color: var(--Green);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: var(--br);
+  border: none;
+  width: 100%;
+  text-align: center;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0px 5px 1px hsl(154, 57%, 46%);
+}
+
+.btn-2:hover {
+  transition: all 0.6s ease;
+  background-color: #2ba671;
+  box-shadow: 0px 5px 1px rgb(22, 100, 66);
+}
+
+.paragraph-2 {
+  color: var(--Grayish-Blue);
+  font-weight: 400;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 1.5;
+  font-size: 0.65rem;
+  width: 80%;
+}
+
+.paragraph-2 span {
+  color: var(--Red);
+}
+
+/* Error or Success */
+
+.success input {
+  border-color: #09c372;
+}
+
+.error input {
+  border-color: #ff3860;
+}
+
+.error {
+  color: #ff3860;
+  font-size: .8rem;
+  font-weight: 400;
+  margin-top: .2rem;
+  text-align: right;
+  
+}
+
+@media (min-width: 480px) {
+  body {
+    background-image: url(images/bg-intro-desktop.png);
+    background-position: center;
+  }
+}
+
+@media (min-width: 640px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .paragraph-1 {
+    font-size: 1.1rem;
+  }
+
+  .paragraph-2 {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 85%;
+  }
+
+  .container-1 {
+    width: 45%;
+  }
+
+  .container-2 {
+    width: 100%;
+  }
+
+  .title {
+    width: 80%;
+    font-size: 3rem;
+    text-align: left;
+  }
+  .paragraph-1 {
+    text-align: left;
+  }
+}
