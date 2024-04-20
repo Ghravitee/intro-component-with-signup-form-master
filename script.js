@@ -72,7 +72,9 @@ const setSuccess = element => {
     // email
     email.setAttribute('placeholder', '');
     email.style.backgroundImage = 'none';
-    email.placeholder = "email@example.com"
+    email.placeholder = "email@example/com"
+    email.placeholder.style.color = "red"
+
 
 
     // password
